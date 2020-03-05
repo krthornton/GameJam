@@ -7,10 +7,10 @@ public class PlayerMovement : MonoBehaviour
     // init some public vars (editabl in Unity)
     public CharacterController2D controller;
     public Animator animator;
-    public float horizontalMove = 0f;
     public float runSpeed = 40f;
 
     // init some private vars
+    float horizontalMove = 0f;
     bool jump = false;
 
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Get input from the user
+        // Check if the user is moving
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         if (horizontalMove != 0)
         {
@@ -32,7 +32,18 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isMoving", false);
         }
-        
+
+        // Check if the user is trying to attack
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Check if the player is already attacking
+            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Attack"))
+            {
+                // Play the attack animation
+                animator.Play("Player_Attack");
+            }
+            
+        }
 
         // Check if the user is trying to jump
         if (Input.GetButtonDown("Jump"))
