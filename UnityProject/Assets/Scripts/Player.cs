@@ -7,15 +7,16 @@ public class Player : MonoBehaviour
 {
     // init some vars editable in Unity
     public int startingHealth;
+    public int currentHealth;
     [Tooltip("Specifies the amount of damage dealt to enemies when attacking.")]
     public int attackPoints;
     public int enemiesDefeated = 0;
     public bool dead = false;
+    public AudioSource hurtSound;
 
     // init some private vars
     private float spawnTime;
     private List<GameObject> nearbyEnemies = new List<GameObject>();
-    private int currentHealth;
     private Rigidbody2D rb;
     private Animator anim;
 
@@ -87,6 +88,9 @@ public class Player : MonoBehaviour
     {
         // subtract from the player's health
         currentHealth -= amount;
+
+        // play the damaged sound
+        hurtSound.Play();
 
         // add force to the player to knock them back
         if (direction.x > 0f)

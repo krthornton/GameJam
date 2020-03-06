@@ -70,9 +70,11 @@
     <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\GameOverDefeated.cs" />
     <Compile Include="Assets\Scripts\GameOverTime.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SpawnerController.cs" />
+    <Compile Include="Assets\Scripts\UpdateUIHealth.cs" />
     <Compile Include="Assets\Scripts\UpdateUIKills.cs" />
     <Compile Include="Assets\Scripts\UpdateUITime.cs" />
     <None Include="Assets\Pixel Font - Tripfive\_README.txt" />

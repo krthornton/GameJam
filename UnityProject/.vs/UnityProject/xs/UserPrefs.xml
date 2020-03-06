@@ -1,17 +1,8 @@
 ﻿<Properties StartupConfiguration="{5B580621-09B4-68CB-B5F4-5B9DD210A60F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UpdateUITime.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PauseMenu.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="69" Column="37" />
-      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="13" Column="74" />
-      <File FileName="Assets/Scripts/SpawnerController.cs" Line="30" Column="10" />
-      <File FileName="Assets/Scripts/CameraFollow.cs" Line="9" Column="24" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="152" Column="64" />
-      <File FileName="Assets/Scripts/Player.cs" Line="13" Column="11" />
-      <File FileName="Assets/Scripts/GameOver.cs" Line="23" Column="46" />
-      <File FileName="Assets/Scripts/GameOverTime.cs" Line="23" Column="81" />
-      <File FileName="Assets/Scripts/GameOverDefeated.cs" Line="17" Column="80" />
-      <File FileName="Assets/Scripts/UpdateUITime.cs" Line="29" Column="14" />
-      <File FileName="Assets/Scripts/UpdateUIKills.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/PauseMenu.cs" Line="57" Column="25" />
+      <File FileName="Assets/Scripts/Player.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,7 +11,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Pixel Font - Tripfive" expanded="True" />
               <Node name="Scripts" expanded="True">
-                <Node name="UpdateUITime.cs" selected="True" />
+                <Node name="PauseMenu.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -30,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="afd19b5c-85ba-4b03-8aec-b6036340fffc" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="491bd8aa-f82a-445b-a9c0-c273c7e7fb22" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

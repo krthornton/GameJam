@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     public int attackPoints;
     [Tooltip("Specifies the minimum attack distance between the enemy and the player.")]
     public float attackDistance;
+    public AudioSource hitSound;
+    public AudioSource deathSound;
 
     // init some private variables
     private Rigidbody2D rb;
@@ -119,6 +121,9 @@ public class Enemy : MonoBehaviour
 
     public void Damaged(int damageTaken)
     {
+        // play hit sound
+        hitSound.Play();
+
         // add force to the enemy, knocking them back
         if (transform.localScale.x > 0f)
         {
@@ -141,12 +146,15 @@ public class Enemy : MonoBehaviour
         // set dead
         dead = true;
 
+        // play the death sound
+        deathSound.PlayDelayed(0.2f);
+
         // disable the colliders so the enemy falls off the screen
         GetComponent<CircleCollider2D>().enabled = false;
         GetComponent<BoxCollider2D>().enabled = false;
 
         // destroy self after set time
-        Destroy(gameObject, 1.0f);
+        Destroy(gameObject, 3.0f);
 
         // increment the player's score
         target.gameObject.GetComponent<Player>().UpdateScore();
