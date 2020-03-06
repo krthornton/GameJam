@@ -10,13 +10,19 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 40f;
 
     // init some private vars
-    float horizontalMove = 0f;
-    bool jump = false;
+    private float horizontalMove = 0f;
+    private bool jump = false;
+    private Player playerComponent;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        // get the Player script component on startup
+        playerComponent = gameObject.GetComponent<Player>();
+
+        // get the Animator component
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -36,13 +42,7 @@ public class PlayerMovement : MonoBehaviour
         // Check if the user is trying to attack
         if (Input.GetMouseButtonDown(0))
         {
-            // Check if the player is already attacking
-            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Attack"))
-            {
-                // Play the attack animation
-                animator.Play("Player_Attack");
-            }
-            
+            Attack();
         }
 
         // Check if the user is trying to jump
@@ -62,5 +62,20 @@ public class PlayerMovement : MonoBehaviour
         // Move our character
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
+    }
+
+    private void Attack()
+    {
+        // Check if the player is already attacking
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Attack"))
+        {
+            return;
+        }
+
+        // play the attack animation
+        animator.Play("Player_Attack");
+
+        // call attack on playerComponent
+        playerComponent.Attack();
     }
 }

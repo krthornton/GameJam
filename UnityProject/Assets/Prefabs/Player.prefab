@@ -77,7 +77,8 @@ GameObject:
   - component: {fileID: 4855961009821230786}
   - component: {fileID: 1872112641582693322}
   - component: {fileID: 3759201896788381344}
-  - component: {fileID: 8283063146242943589}
+  - component: {fileID: 6632059023171707036}
+  - component: {fileID: 109553640}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -281,9 +282,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1872112641582693322}
   animator: {fileID: 6433460399658560494}
-  horizontalMove: 0
   runSpeed: 40
---- !u!114 &8283063146242943589
+--- !u!61 &6632059023171707036
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433460399658560481}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.08520013, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.25, y: 0.27}
+    newSize: {x: 0.25, y: 0.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.19146553, y: 0.27}
+  m_EdgeRadius: 0
+--- !u!114 &109553640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,7 +318,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6433460399658560481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f866c5ab3f593704fa9145b57f6d1704, type: 3}
+  m_Script: {fileID: 11500000, guid: 7074c9bada7a944d28d18529327e560c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 0
+  startingHealth: 5
+  score: 0
+  attackPoints: 1

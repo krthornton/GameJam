@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{5B580621-09B4-68CB-B5F4-5B9DD210A60F}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="69" Column="37" />
+      <File FileName="Assets/Scripts/PlayerDamage.cs" Line="112" Column="1" />
+      <File FileName="Assets/Scripts/EnemyFollow.cs" Line="78" Column="14" />
+      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="8" Column="35" />
+      <File FileName="Assets/Scripts/SpawnerController.cs" Line="30" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UnityProject" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Player.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a92ba9a7-7e90-4543-9bb0-70648702f9c1" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
