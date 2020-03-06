@@ -149,6 +149,6 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject, 1.0f);
 
         // increment the player's score
-        target.gameObject.GetComponent<Player>().UpdateScore(1);
+        target.gameObject.GetComponent<Player>().UpdateScore();
     }
 }

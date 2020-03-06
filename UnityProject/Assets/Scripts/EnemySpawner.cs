@@ -11,7 +11,6 @@ public class EnemySpawner : MonoBehaviour
     public GameObject Spawn()
     {
         // instantiate a new enemy from the prefab at location of spawner
-        // add to list of known enemies
         return Instantiate(enemyPrefab, transform);
     }
 }

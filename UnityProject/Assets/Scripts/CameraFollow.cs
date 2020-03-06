@@ -8,14 +8,8 @@ public class CameraFollow : MonoBehaviour
     public GameObject objectToFollow;
     public float speed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // calculate interpolation
         float interpolation = speed * Time.deltaTime;
@@ -24,7 +18,7 @@ public class CameraFollow : MonoBehaviour
         Vector3 position = this.transform.position;
         position.x = Mathf.Lerp(
             this.transform.position.x,
-            objectToFollow.transform.position.x,
+            Mathf.Clamp(objectToFollow.transform.position.x, -21, 21),
             interpolation
         );
 

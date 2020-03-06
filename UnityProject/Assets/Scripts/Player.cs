@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -8,17 +9,21 @@ public class Player : MonoBehaviour
     public int startingHealth;
     [Tooltip("Specifies the amount of damage dealt to enemies when attacking.")]
     public int attackPoints;
+    public int enemiesDefeated = 0;
+    public bool dead = false;
 
     // init some private vars
-    private int score = 0;
+    private float spawnTime;
     private List<GameObject> nearbyEnemies = new List<GameObject>();
     private int currentHealth;
     private Rigidbody2D rb;
     private Animator anim;
-    private bool dead = false;
 
     public void Start()
     {
+        // init the player's spawn time
+        spawnTime = Time.time;
+
         // init the player's health
         currentHealth = startingHealth;
 
@@ -98,10 +103,10 @@ public class Player : MonoBehaviour
     }
 
     // Function called to update the player's score
-    public void UpdateScore(int amount)
+    public void UpdateScore()
     {
         // add amount to current score
-        score += amount;
+        enemiesDefeated += 1;
     }
 
     // Function called when the player is dead
@@ -110,6 +115,36 @@ public class Player : MonoBehaviour
         // update dead
         dead = true;
 
-        Debug.Log("Player is dead!");
+        // disable the player's input
+        GetComponent<CharacterController2D>().enabled = false;
+
+        // play the hurt animation
+        anim.Play("Player_Killed");
+
+        // disable the player's colliders
+        foreach (CircleCollider2D circleCollider in GetComponents<CircleCollider2D>())
+        {
+            circleCollider.enabled = false;
+        }
+
+        // add force to the player upwards
+        rb.AddForce(new Vector2(0f, 400f));
+
+        // save the player's time alive and enemies defeated
+        PlayerPrefs.SetFloat("time_alive", Time.time - spawnTime);
+        PlayerPrefs.SetInt("enemies_defeated", enemiesDefeated);
+
+        // call GameOver
+        StartCoroutine("GameOver");
+    }
+
+    // coroutine to wait and load the GameOver scene
+    private IEnumerator GameOver()
+    {
+        // load for the death animtion to finish
+        yield return new WaitForSeconds(2);
+
+        // load GameOver scene
+        SceneManager.LoadScene("GameOver");
     }
 }

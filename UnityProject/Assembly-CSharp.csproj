@@ -67,9 +67,15 @@
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
+    <Compile Include="Assets\Scripts\GameOverDefeated.cs" />
+    <Compile Include="Assets\Scripts\GameOverTime.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SpawnerController.cs" />
+    <Compile Include="Assets\Scripts\UpdateUIKills.cs" />
+    <Compile Include="Assets\Scripts\UpdateUITime.cs" />
+    <None Include="Assets\Pixel Font - Tripfive\_README.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/krthornton/Documents/Game Design/GameJam/UnityProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
