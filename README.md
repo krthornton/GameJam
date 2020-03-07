@@ -1,5 +1,5 @@
-# Game Jam: The Spreadening
-**Game Title: _Game Jam: The Spreadening_**
+# Jam Game: The Spreadening
+**Game Title: _Jam Game: The Spreadening_**
 
 **Author: _Kaleb Thornton_**<br>
 **Email: _krt237@msstate.edu_**<br>
